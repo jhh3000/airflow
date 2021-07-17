@@ -482,7 +482,7 @@ STORE_DAG_CODE = conf.getboolean("core", "store_dag_code", fallback=True)
 # The handlers are restored after the task completes execution.
 DONOT_MODIFY_HANDLERS = conf.getboolean('logging', 'donot_modify_handlers', fallback=False)
 
-CAN_FORK = hasattr(os, "fork")
+CAN_FORK = False
 
 EXECUTE_TASKS_NEW_PYTHON_INTERPRETER = not CAN_FORK or conf.getboolean(
     'core',
